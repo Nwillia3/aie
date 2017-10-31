@@ -12,9 +12,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'reset', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'why_aie', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= stylesheet_link_tag    'projects', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= stylesheet_link_tag    'why_aie', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= stylesheet_link_tag    'about', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= stylesheet_link_tag    'our_approach', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%#= stylesheet_link_tag    'get_involved', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -28,13 +28,15 @@
   <body>
   	<header class="cd-header">
   		<div class="cd-logo">
-  			<%= image_tag("home/cd-logo.svg", :alt => "logo") %>
+  			<%= link_to image_tag("home/cd-logo.svg", :alt => "logo"), root_path %>
   		</div>
 
 			<nav>
 				<ul class="cd-secondary-nav">
-					<li><a href="#0">Donate</a></li>
-					<li><a href="#0">Volunteer</a></li>
+					<li><a href="https://www.youcaring.com/anythingiseverythingafterschoolprograminliberia-974493">Donate</a></li>
+					<li>
+						<%= link_to 'WHY AIE', why_aie_index_path %>
+						</li>
 				</ul>
 			</nav> <!-- cd-nav -->
 
@@ -46,15 +48,20 @@
 			<ul class="cd-primary-nav">
 				<li class="cd-label">About us</li>
 
-				<li><a href="#0">The team</a></li>
-				<li><a href="#0">Our services</a></li>
-				<li><a href="#0">Our projects</a></li>
+				<li><%= link_to 'The Team', about_staff_path %></li>
 
-				<li class="cd-label">Work with us</li>
+				<li><%= link_to 'Our Mission', about_mission_path %></li>
 
-				<li><a href="#0">Start a project</a></li>
-				<li><a href="#0">Join In</a></li>
-				<li><a href="#0">Create an account</a></li>
+				<li class="cd-label">Our Approach</li>
+
+				<li><a href="#0">Our Solutions</a></li>
+				<li><a href="#0">Our Local Partnerships</a></li>
+
+				<li class="cd-label">Get Involved</li>
+
+				<li><a href="">Donate</a></li>
+				<li><a href="#0">Volunteer</a></li>
+				<li><a href="#0">Brand Partnerships</a></li>
 
 				<li class="cd-label">Follow us</li>
 				
@@ -65,14 +72,55 @@
 			</ul>
 		</nav>
 
-		<section class="cd-intro">
-			<h1>Full-Screen Pop-Out Navigation</h1>
-		</section>
+		
     <%= yield %>
 
-    <h1>Does any of this work</h1>
+    
 
 	<%= javascript_include_tag 'jquery-2.1.1', 'data-turbolinks-track': 'reload' %>
 	<%= javascript_include_tag 'main', 'data-turbolinks-track': 'reload' %> <!-- Resource jQuery -->
   </body>
+
+  <footer class="AIE-footer row ">
+	  <div class="AIE-footer-top-row ">
+	    <ul class="AIE-footer-row-1 col-md-4 col-sm-12">
+	      <li class="AIE-footer-header">Get to know us</li>
+	      <li><a href="https://www.charitywater.org/blog/">Read our blog</a></li>
+	      <li><a href="https://www.charitywater.org/stories/">Field stories</a></li>
+	      <li><a href="https://www.charitywater.org/about/staff.php">Meet our staff</a></li>
+	    </ul>
+
+	    <ul class="AIE-footer-row-2 col-md-4 col-sm-12">
+	      <li class="AIE-footer-header">Connect</li>
+	      <li><a href="https://www.charitywater.org/contact/">Contact us</a></li>
+	      <li><a href="http://support.charitywater.org/hc/en-us">Help center</a></li>
+	      <li><a href="https://www.charitywater.org/about/request-speaker/">Request a speaker</a></li>
+	    </ul>
+
+	    <ul class="AIE-footer-row-3 col-md-4 col-sm-12">
+	      <li class="AIE-footer-header">Connect</li>
+	      <li><a href="https://www.charitywater.org/contact/">Contact us</a></li>
+	      <li><a href="http://support.charitywater.org/hc/en-us">Help center</a></li>
+	      <li><a href="https://www.charitywater.org/about/request-speaker/">Request a speaker</a></li>
+	    </ul>
+	  </div>
+	  <div class="AIE-footer-bottom-row">
+	    <ul>
+	      <li>AIE is working towards 501 (c)(3)</li>
+	      <li><a href="https://www.charitywater.org/privacy/">Privacy policy</a></li>
+	      <li>©2017</li>
+	      <li><a class="AIE-footer-emph" href="https://my.charitywater.org/mailing_list_subscribers/new">Get our emails</a></li>
+	    </ul>
+	  </div>
+	 	<div class="AIE-footer-social-row ">
+	    <ul>
+	      <li class="AIE-footer-social-twitter"><a href="https://twitter.com/charitywater"><span class="AIE-icon-twitter icn"><span class="for-screen-readers-only">Twitter</span></span></a></li>
+	      <li class="AIE-footer-social-facebook"><a href="https://www.facebook.com/charitywater"><span class="AIE-icon-facebook icn"><span class="for-screen-readers-only">Facebook</span></span></a></li>
+	      <li class="AIE-footer-social-instagram"><a href="https://www.instagram.com/charitywater/"><span class="AIE-icon-instagram icn"><span class="for-screen-readers-only">Instagram</span></span></a></li>
+	     
+	      <li class="AIE-footer-social-linkedin"><a href="https://www.linkedin.com/company/charity-water"><span class="AIE-icon-linkedin icn"><span class="for-screen-readers-only">Linkedin</span></span></a></li>
+	    </ul>
+	  </div>
+	</footer>
+
 </html>

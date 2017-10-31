@@ -150,7 +150,7 @@ html, body {
 }
 .cd-secondary-nav a {
   display: inline-block;
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -169,7 +169,7 @@ html, body {
   background-color: #03263d;
 }
 .cd-primary-nav-trigger .cd-menu-text {
-  color: white;
+  color: black;
   text-transform: uppercase;
   font-weight: 700;
   /* hide the text on small devices */
@@ -384,8 +384,8 @@ html, body {
   position: absolute;
   width: 90%;
   max-width: 1170px;
-  left: 50%;
-  top: 50%;
+  left: 30%;
+  top: 30%;
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -407,7 +407,7 @@ html, body {
 }
 @media only screen and (min-width: 1170px) {
   .cd-intro {
-    height: 700px;
+    height: 500px;
   }
 }
 

@@ -7,4 +7,7 @@ class AboutController < ApplicationController
 
   def staff
   end
+
+  def show
+  end
 end

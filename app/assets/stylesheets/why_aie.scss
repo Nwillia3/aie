@@ -1,0 +1,39 @@
+.cd-intro-why_aie{
+  position: relative;
+  height: 50%;
+  background: url("home/cd-background-img.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.cd-intro-why_aie h1 {
+  position: absolute;
+  width: 90%;
+  max-width: 1170px;
+  left: 30%;
+  top: 30%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  color: white;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .cd-intro-why_aie h1 {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-intro-why_aie {
+    height: 500px;
+  }
+}

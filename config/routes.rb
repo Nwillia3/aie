@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   resources :projects
   resources :why_aie
-  resources :about
+  # resources :about
 
   # get 'about/index'
 
