@@ -1,14 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AIE</title>
+    
+    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+		
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'reset', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'style', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'projects', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'why_aie', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'about', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'our_approach', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= stylesheet_link_tag    'get_involved', media: 'all', 'data-turbolinks-track': 'reload' %>
+      
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'modernizr', 'data-turbolinks-track': 'reload' %>
+    
+    <title>Anything Is Everything</title>
   </head>
 
   <body>
+  	<header class="cd-header">
+  		<div class="cd-logo">
+  			<%= image_tag("home/cd-logo.svg", :alt => "logo") %>
+  		</div>
+
+			<nav>
+				<ul class="cd-secondary-nav">
+					<li><a href="#0">Donate</a></li>
+					<li><a href="#0">Volunteer</a></li>
+				</ul>
+			</nav> <!-- cd-nav -->
+
+			<a class="cd-primary-nav-trigger" href="#0">
+				<span class="cd-menu-text">Menu</span><span class="cd-menu-icon"></span>
+			</a> <!-- cd-primary-nav-trigger -->
+  	</header>
+  	<nav>
+			<ul class="cd-primary-nav">
+				<li class="cd-label">About us</li>
+
+				<li><a href="#0">The team</a></li>
+				<li><a href="#0">Our services</a></li>
+				<li><a href="#0">Our projects</a></li>
+
+				<li class="cd-label">Work with us</li>
+
+				<li><a href="#0">Start a project</a></li>
+				<li><a href="#0">Join In</a></li>
+				<li><a href="#0">Create an account</a></li>
+
+				<li class="cd-label">Follow us</li>
+				
+				<li class="cd-social cd-facebook"><a href="#0">Facebook</a></li>
+				<li class="cd-social cd-instagram"><a href="#0">Instagram</a></li>
+				<li class="cd-social cd-dribbble"><a href="#0">Dribbble</a></li>
+				<li class="cd-social cd-twitter"><a href="#0">Twitter</a></li>
+			</ul>
+		</nav>
+
+		<section class="cd-intro">
+			<h1>Full-Screen Pop-Out Navigation</h1>
+		</section>
     <%= yield %>
+
+    <h1>Does any of this work</h1>
+
+	<%= javascript_include_tag 'jquery-2.1.1', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'main', 'data-turbolinks-track': 'reload' %> <!-- Resource jQuery -->
   </body>
 </html>
